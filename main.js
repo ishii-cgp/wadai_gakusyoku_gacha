@@ -39,7 +39,7 @@ function getRandomInt(max) {
 }
 
 function makecard(menu){
-  return '<a href="'+menu[13]+'"target="_blank" class="linka"><div class="item__Card-sc-2teu2n-1 cKscZI"><h4 class="item__OrderLabel-sc-2teu2n-0 kEsMVQ ribbon">'+menu[0]+'</h4><h2 class="item__MenuName-sc-2teu2n-2 dpqSil">'+menu[1]+'</h2><p>'+menu[2]+'円 '+menu[3]+'kcal 塩分 '+menu[7]+'g</p></div></a>'
+  return '<a href="'+menu[15]+'"target="_blank" class="linka"><div class="item__Card-sc-2teu2n-1 cKscZI"><h4 class="item__OrderLabel-sc-2teu2n-0 kEsMVQ ribbon">'+menu[0]+'</h4><h2 class="item__MenuName-sc-2teu2n-2 dpqSil">'+menu[1]+'</h2><p>'+menu[2]+'円 '+menu[3]+'kcal 塩分 '+menu[7]+'g</p></div></a>'
 }
 
 function makeresult(vcs,rgy){
@@ -83,9 +83,9 @@ function onButtonClick() {
       vcs[0]=vcs[0]+parseInt(menu[2])
       vcs[1]=vcs[1]+parseInt(menu[3])
       vcs[2]=vcs[2]+parseInt(menu[7])
-      rgy[0]=rgy[0]+parseFloat(menu[10])
-      rgy[1]=rgy[1]+parseFloat(menu[11])
-      rgy[2]=rgy[2]+parseFloat(menu[12])
+      //rgy[0]=rgy[0]+parseFloat(menu[10])
+      //rgy[1]=rgy[1]+parseFloat(menu[11])
+      //rgy[2]=rgy[2]+parseFloat(menu[12])
     }
     if(ddmenu=="2"){
         break;
