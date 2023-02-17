@@ -39,7 +39,7 @@ function getRandomInt(max) {
 }
 
 function makecard(menu){
-  return '<a href="'+menu[15]+'"target="_blank" class="linka"><div class="item__Card-sc-2teu2n-1 cKscZI"><h4 class="item__OrderLabel-sc-2teu2n-0 kEsMVQ ribbon">'+menu[0]+'</h4><h2 class="item__MenuName-sc-2teu2n-2 dpqSil">'+menu[1]+'</h2><p>'+menu[2]+'円 '+menu[3]+'kcal 塩分 '+menu[7]+'g</p></div></a>'
+  return '<a href="'+menu[13]+'"target="_blank" class="linka"><div class="item__Card-sc-2teu2n-1 cKscZI"><h4 class="item__OrderLabel-sc-2teu2n-0 kEsMVQ ribbon">'+menu[0]+'</h4><h2 class="item__MenuName-sc-2teu2n-2 dpqSil">'+menu[1]+'</h2><p>'+menu[2]+'円 '+menu[3]+'kcal 塩分 '+menu[7]+'g</p></div></a>'
 }
 
 function makeresult(vcs,rgy){
@@ -49,10 +49,25 @@ function makeresult(vcs,rgy){
 function selectshop(ddmenu){
   switch(ddmenu){
     case '0':
-    var data = csvToArray('https://docs.google.com/spreadsheets/d/1vFPJ8wXCP_naSrr7cd5N6NlRawxZGksXLf2jVbB8nE8/edit#gid=0&single=true&output=csv');
+    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vRYdUc-mpd3Lvy2ZSUd3xyMfB3avzXDv5kbzJU5SwPbhAv0yCqMGHYR4yhJfSFT96Vvc0GgpGcXw3JV/pub?gid=0&single=true&output=csv');
     break;
     case '1':
     var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vQYpyRZCLhMy_9GpTtDY_EGeyusR18Td38iunmnykoRMgCFLnzLU16cH6VnwUbPUplTzZZZ93GNJRa_/pub?gid=0&single=true&output=csv');
+    break;
+    case '2':
+    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vRJcC1CZd_5YmWM75pLIsix8HjbVy1BjSA81S5ZvKAsjCxSa8KzYnYL9YHOeMrgp_Cwu-f94cco8C9z/pub?gid=0&single=true&output=csv');
+    break;
+    case '3':
+    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vQDAciFaCDY7fp16T8cBEhYPqcJxArUntqKmmKTH3E8TwfeW_JKlG9InQUa4HE_hSjFsAbzD40Tel00/pub?gid=0&single=true&output=csv');
+    break;
+    case '4':
+    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vSdctUU_yebJ_vqUrv84ZcGOJuPm9gD3BleU3U8iy84mS5itiQ40UgXO8F3Z7Pb6wRWjgmhtZEA45pn/pub?gid=0&single=true&output=csv');
+    break;
+    case '5':
+    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vTq7Sw06BPSG2Ha9ZBNAWiQRMtyi_CWkYnRdnQQh6Y_lx2rJpLql0q_Jyhma83L9oOtqcJ8qT_ASWJG/pub?gid=0&single=true&output=csv');
+    break;
+    case '6':
+    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vR2_aY7gZIoEpAPBLmXNr2Ryz3AFD43hPd22gAFjOzsJkvHa1RxQ9dz5QOXiS1VA_ZZp4WqBFXNiesO/pub?gid=0&single=true&output=csv');
     break;
     default:
     var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vRYdUc-mpd3Lvy2ZSUd3xyMfB3avzXDv5kbzJU5SwPbhAv0yCqMGHYR4yhJfSFT96Vvc0GgpGcXw3JV/pub?gid=0&single=true&output=csv');
@@ -83,9 +98,9 @@ function onButtonClick() {
       vcs[0]=vcs[0]+parseInt(menu[2])
       vcs[1]=vcs[1]+parseInt(menu[3])
       vcs[2]=vcs[2]+parseInt(menu[7])
-      //rgy[0]=rgy[0]+parseFloat(menu[10])
-      //rgy[1]=rgy[1]+parseFloat(menu[11])
-      //rgy[2]=rgy[2]+parseFloat(menu[12])
+      rgy[0]=rgy[0]+parseFloat(menu[10])
+      rgy[1]=rgy[1]+parseFloat(menu[11])
+      rgy[2]=rgy[2]+parseFloat(menu[12])
     }
     if(ddmenu=="2"){
         break;
@@ -105,7 +120,6 @@ function tweet() {
   }
 
   tw_contents=tw_contents+"%0a%0a合計："+vcs[0]+"円 ("+vcs[1]+"kcal)%0a"
-  tw_contents=tw_contents+"%0a%20%23和歌山大学学食ガチャ%20%0a"
-  var url = "https://ishii-cgp.github.io/wadai_gakushoku_gacha/";
+  tw_contents=tw_contents+"%0a%20%23立命館学食ガチャ%20%0a"
+  var url = "https://yuki1201.github.io/rits_gakushoku_gacha/";
   window.open().location.href = ("https://twitter.com/share?url=" + url + "&text=" + tw_contents + "&count=none&lang=ja");
-};
