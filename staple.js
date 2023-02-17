@@ -57,7 +57,7 @@ function tweet_staple() {
   }
 
   tw_contents=tw_contents+"%0a%0a合計："+vcs[0]+"円"+vcs[1]+"kcal%0a"
-  tw_contents=tw_contents+"%0a%20%23立命館学食ガチャ%20%0a"
+  tw_contents=tw_contents+"%0a%20%23和歌山大学学食ガチャ%20%0a"
 　　var url = "https://yuki1201.github.io/rits_gakushoku_gacha/";
 　　window.open().location.href = ("https://twitter.com/share?url=" + url + "&text=" + tw_contents + "&count=none&lang=ja");
 };
