@@ -42,8 +42,8 @@ function makecard(menu){
   return '<a href="'+menu[13]+'"target="_blank" class="linka"><div class="item__Card-sc-2teu2n-1 cKscZI"><h4 class="item__OrderLabel-sc-2teu2n-0 kEsMVQ ribbon">'+menu[0]+'</h4><h2 class="item__MenuName-sc-2teu2n-2 dpqSil">'+menu[1]+'</h2><p>'+menu[2]+'円 '+menu[3]+'kcal 塩分 '+menu[7]+'g</p></div></a>'
 }
 
-function makeresult(vcs,rgy){
-  return '<div class="iteml"><h2>合計</h2></div><div class="itemr"><h3>'+vcs[0]+'円</br>'+vcs[1]+'kcal</br>塩分相当量'+vcs[2]+'g</br>赤：'+rgy[0].toFixed(1)+'点</br>緑：'+rgy[1].toFixed(1)+'点</br>黄：'+rgy[2].toFixed(1)+'点</h3></div></div>'
+function makeresult(vcs){
+  return '<div class="iteml"><h2>合計</h2></div><div class="itemr"><h3>'+vcs[0]+'円</br>'+vcs[1]+'kcal</br>塩分相当量'</h3></div></div>'
 }
 
 function selectshop(ddmenu){
@@ -91,7 +91,8 @@ function onButtonClick() {
         break;
       }
     }
-    document.getElementById("result").insertAdjacentHTML('beforeend',makeresult(vcs,rgy));
+    // document.getElementById("result").insertAdjacentHTML('beforeend',makeresult(vcs,rgy));
+    document.getElementById("result").insertAdjacentHTML('beforeend',makeresult(vcs));
     document.getElementById("note").insertAdjacentHTML("beforeend",'<p class="note" style="text-align:left">1食の目安  (1.0点 = 80 kcal)</br>男：赤 2.0点, 緑 1.0点, 黄 7.0点</br>女：赤 2.0点, 緑 1.0点, 黄 4.0点以上</p></br>');
     document.getElementById("note").insertAdjacentHTML('beforeend','<div align="center"><input type="button" class="btn" value="結果をツイートする" onclick="tweet();" /></div></br>');
     
