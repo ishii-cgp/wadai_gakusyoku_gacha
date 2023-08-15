@@ -52,7 +52,7 @@ function selectshop(ddmenu){
     var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vT5IQKs6FhO896C7H8xXFk6oGiN9xToQFTc2Ix5HTKSxKId2FBn_oeIxAzysd7bNx-7wZ5SHpMffKzM/pub?output=csv');
     break;
     case '1':
-    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vQYpyRZCLhMy_9GpTtDY_EGeyusR18Td38iunmnykoRMgCFLnzLU16cH6VnwUbPUplTzZZZ93GNJRa_/pub?gid=0&single=true&output=csv');
+    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8lcvLlu9vC2SVG2DaGEQULaMXlj-rlzdp15tJilWH9h01qU35DQblaoooc9OChkrwqUjcVjtK6JW-/pub?output=csv');
     break;
     default:
     var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vRYdUc-mpd3Lvy2ZSUd3xyMfB3avzXDv5kbzJU5SwPbhAv0yCqMGHYR4yhJfSFT96Vvc0GgpGcXw3JV/pub?gid=0&single=true&output=csv');
@@ -91,8 +91,8 @@ function onButtonClick() {
         break;
       }
     }
-    // document.getElementById("result").insertAdjacentHTML('beforeend',makeresult(vcs,rgy));
-    // document.getElementById("note").insertAdjacentHTML("beforeend",'<p class="note" style="text-align:left">1食の目安  (1.0点 = 80 kcal)</br>男：赤 2.0点, 緑 1.0点, 黄 7.0点</br>女：赤 2.0点, 緑 1.0点, 黄 4.0点以上</p></br>');
+    document.getElementById("result").insertAdjacentHTML('beforeend',makeresult(vcs,rgy));
+    document.getElementById("note").insertAdjacentHTML("beforeend",'<p class="note" style="text-align:left">1食の目安  (1.0点 = 80 kcal)</br>男：赤 2.0点, 緑 1.0点, 黄 7.0点</br>女：赤 2.0点, 緑 1.0点, 黄 4.0点以上</p></br>');
     document.getElementById("note").insertAdjacentHTML('beforeend','<div align="center"><input type="button" class="btn" value="結果をツイートする" onclick="tweet();" /></div></br>');
     
     //'</br>1食の目安　赤2.7点,緑1.0点,黄5.7点'
