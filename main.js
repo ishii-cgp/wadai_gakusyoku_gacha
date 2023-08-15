@@ -39,11 +39,11 @@ function getRandomInt(max) {
 }
 
 function makecard(menu){
-  return '<a href="'+menu[16]+'"target="_blank" class="linka"><div class="item__Card-sc-2teu2n-1 cKscZI"><h4 class="item__OrderLabel-sc-2teu2n-0 kEsMVQ ribbon">'+menu[0]+'</h4><h2 class="item__MenuName-sc-2teu2n-2 dpqSil">'+menu[1]+'</h2><p>'+menu[2]+'円 '+menu[3]+'kcal 塩分 '+menu[7]+'g</p></div></a>'
+  return '<a href="'+menu[15]+'"target="_blank" class="linka"><div class="item__Card-sc-2teu2n-1 cKscZI"><h4 class="item__OrderLabel-sc-2teu2n-0 kEsMVQ ribbon">'+menu[0]+'</h4><h2 class="item__MenuName-sc-2teu2n-2 dpqSil">'+menu[1]+'</h2><p>'+menu[2]+'円 '+menu[3]+'kcal'g</p></div></a>'
 }
 
 function makeresult(vcs){
-  return '<div class="iteml"><h2>合計</h2></div><div class="itemr"><h3>'+vcs[0]+'円</br>'+vcs[1]+'kcal</br>塩分相当量</h3></div></div>'
+  return '<div class="iteml"><h2>合計</h2></div><div class="itemr"><h3>'+vcs[0]+'円</br>'+vcs[1]+'kcal</br></h3></div></div>'
 }
 
 function selectshop(ddmenu){
