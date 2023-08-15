@@ -49,7 +49,7 @@ function makeresult(vcs,rgy){
 function selectshop(ddmenu){
   switch(ddmenu){
     case '0':
-    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Ts7CzrlubGBcNx8t3GSr71n2KttzWHYo6ngXv9Ij5_mgSWJR7pIlQG0IlP8AgQMzUZ3iXbYSgiD5/pub?output=csv');
+    var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vT5IQKs6FhO896C7H8xXFk6oGiN9xToQFTc2Ix5HTKSxKId2FBn_oeIxAzysd7bNx-7wZ5SHpMffKzM/pub?output=csv');
     break;
     case '1':
     var data = csvToArray('https://docs.google.com/spreadsheets/d/e/2PACX-1vQYpyRZCLhMy_9GpTtDY_EGeyusR18Td38iunmnykoRMgCFLnzLU16cH6VnwUbPUplTzZZZ93GNJRa_/pub?gid=0&single=true&output=csv');
